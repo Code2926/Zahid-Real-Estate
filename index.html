@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>Zahid Estate | Luxury Real Estate & Investment Advisory in Pakistan</title>
+<meta name="description" content="Zahid Estate offers verified luxury real estate, investment advisory, and premium property services across Pakistan. Trusted for over 10 years.">
+<meta name="keywords" content="Real Estate Pakistan, Property Investment, DHA, Bahria Town, Luxury Homes">
+<meta name="author" content="Zahid Estate">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<!-- Apple iOS -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<!-- Android / PWA -->
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+
+<style>
+:root{
+  --navy:#0B2340;
+  --gold:#C9A85C;
+  --ivory:#F6F2EC;
+  --dark:#1E2430;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--ivory);
+  color:var(--dark);
+  line-height:1.8;
+}
+h1,h2,h3{
+  font-family:'Playfair Display',serif;
+  color:var(--navy);
+}
+a{text-decoration:none;color:inherit}
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:30px 20px;
+}
+
+/* HERO */
+.hero{
+  background:
+    linear-gradient(rgba(11,35,64,.85),rgba(11,35,64,.85)),
+    url('https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+  padding:55px 10px;
+  text-align:center;
+  color:#fff;
+}
+.hero img{max-width:130px;margin-bottom:25px}
+.hero h1{font-size:3.4rem;color:#fff}
+.hero p{
+  max-width:720px;
+  margin:25px auto 45px;
+  font-size:1.25rem;
+}
+.cta{
+  background:var(--gold);
+  color:var(--navy);
+  padding:16px 40px;
+  border-radius:50px;
+  font-weight:600;
+}
+
+/* TRUST */
+.trust{
+  background:var(--navy);
+  color:var(--gold);
+  padding:16px;
+  text-align:center;
+  font-size:.95rem;
+  border-bottom: 2px solid var(--gold);
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:35px;
+}
+.card{
+  background:#fff;
+  border-radius:22px;
+  padding:40px 30px;
+  text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,.07);
+}
+.card i{
+  font-size:32px;
+  color:var(--gold);
+  margin-bottom:18px;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+.project{
+  position:relative;
+  border-radius:22px;
+  overflow:hidden;
+}
+.project img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
+.badge{
+  position:absolute;
+  top:15px;
+  left:15px;
+  background:var(--gold);
+  color:var(--navy);
+  padding:7px 16px;
+  border-radius:25px;
+  font-size:.75rem;
+  font-weight:600;
+}
+.project-info{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:20px;
+  color:#fff;
+  background:linear-gradient(transparent,rgba(11,35,64,.9));
+}
+
+/* WHY */
+.why{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.why img{width:100%;border-radius:22px}
+.why ul{list-style:none}
+.why li{
+  margin-bottom:18px;
+  padding-left:28px;
+  position:relative;
+}
+.why li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:var(--gold);
+  font-weight:bold;
+}
+
+/* General: desktop default */
+.youtube-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns */
+  gap: 40px;
+  align-items: stretch; /* equal height */
+}
+
+.yt-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 22px;
+  text-align: center;           /* center content on desktop */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* vertically center content */
+  align-items: center;          /* horizontally center everything */
+  height: 100%;                 /* match video height */
+  box-shadow: 0 20px 50px rgba(0,0,0,.08);
+}
+
+.yt-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%; /* circular logo */
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.yt-card h3 {
+  margin: 10px 0 8px 0;
+  font-size: 1.3rem;
+  color: var(--navy);
+}
+
+.yt-card p {
+  margin: 5px 0 20px 0;
+  font-size: 0.95rem;
+  color: var(--dark);
+  line-height: 1.5;
+  max-width: 100%;
+}
+
+/* Button styling */
+.yt-card .cta {
+  margin-top: auto;       /* pushes button below text */
+  align-self: center;     /* center button */
+  width: 100%;
+  max-width: 360px;       /* roughly same width as video */
+}
+
+/* Video wrapper */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 ratio */
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,.1);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Responsive: tablets / smaller screens */
+@media (max-width: 900px) {
+  .youtube-grid {
+    grid-template-columns: 1fr; /* stack vertically */
+    gap: 30px;
+  }
+
+  .yt-card {
+    height: auto; /* auto height on smaller screens */
+  }
+
+  .yt-card .cta {
+    width: fit-content;
+  }
+}
+
+/* Mobile: extra small */
+@media (max-width: 600px) {
+  .yt-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .yt-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .yt-card .cta {
+    padding: 12px 25px;
+    font-size: 0.85rem;
+  }
+}
+
+/* CONTACT */
+.contact {
+  background: #fff;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* stack all fields vertically */
+  gap: 20px;
+}
+
+/* Input wrapper for icons */
+.input-icon {
+  position: relative;
+  width: 100%;
+}
+
+/* Icon inside input */
+.input-icon i {
+  position: absolute;
+  left: 14px;
+  top: 14px;                /* FIXED anchor */
+  color: var(--gold);
+  font-size: 20px;
+  pointer-events: none;
+  z-index: 2;
+  line-height: 1;           /* IMPORTANT for brand icons */
+}
+
+/* Input & textarea */
+.input-icon input,
+.input-icon textarea {
+  width: 100%;
+  padding: 12px 12px 12px 45px;  /* left padding = icon left + icon size + small gap */
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+/* Textarea inside icon wrapper */
+.input-icon textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Regular textarea without icon spacing */
+textarea {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  height: 120px;
+  resize: none;
+}
+
+/* Submit button */
+form button.cta {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  padding: 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+form button.cta:hover {
+  transform: scale(1.03);
+  background: #d4b75f;
+}
+
+#phoneFeedback {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  color: var(--navy);
+  font-size: .9rem;
+  opacity: 0;
+  transition: opacity .25s ease-in;
+}
+
+footer {
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+  padding: 25px 15px;
+  position: relative;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+  border-top: 2px solid var(--gold);
+}
+
+footer h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+footer p.tagline {
+  font-size: 0.9rem;
+  margin: 5px 0 15px 0;
+  color: #ddd;
+}
+
+footer .social-icons {
+  margin-bottom: 10px;
+}
+
+footer .social-icons a {
+  color: var(--gold);
+  margin: 0 12px;
+  font-size: 1.4rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+footer p.copy {
+  font-size: 0.8rem;
+  color: #bbb;
+  margin-top: 12px;
+}
+
+/* WhatsApp FAB: upgraded professional version */
+.whatsapp {
+  position: fixed;
+  right: 24px;
+  bottom: max(env(safe-area-inset-bottom), 24px); /* full safe area support */
+  width: 58px;
+  height: 58px;
+  background: var(--gold);
+  color: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  z-index: 999;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  animation: subtle-bounce 2.5s infinite;
+}
+
+/* Hover / active effect */
+.whatsapp:hover {
+  transform: scale(1.2);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+  background: #d4b75f; /* slight color shift */
+}
+
+/* Click ripple effect (optional but professional touch) */
+.whatsapp::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.whatsapp:active::after {
+  transform: scale(1.5);
+  opacity: 1;
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+/* Subtle floating bounce to draw attention */
+@keyframes subtle-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Optional mobile adjustment: smaller size for tiny screens */
+@media(max-width: 400px) {
+  .whatsapp {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+}
+
+
+@media(max-width:900px){
+  .why{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<img src="logo.png" alt="Zahid Estate Logo">
+<h1>Luxury Real Estate & Investment Advisory</h1>
+<p>Verified properties, strategic investments, and trusted guidance for elite buyers across Pakistan.</p>
+<a href="#contact" class="cta">Request Private Consultation</a>
+</section>
+
+<div class="trust">10+ Years Experience • 500+ Deals • 100% Verified Properties</div>
+
+<section class="container">
+<h2>Our Expertise</h2><br>
+<div class="services">
+<div class="card"><i class="fa-solid fa-house"></i><h3>Luxury Homes</h3><p>High-end residential properties in prime locations.</p></div>
+<div class="card"><i class="fa-solid fa-city"></i><h3>Commercial Assets</h3><p>Plazas & income-generating investments.</p></div>
+<div class="card"><i class="fa-solid fa-chart-line"></i><h3>Investment Strategy</h3><p>ROI-driven market intelligence.</p></div>
+<div class="card"><i class="fas fa-check"></i><h3>Verified Listings</h3><p>Complete legal verification.</p></div>
+</div>
+</section>
+
+<section class="container">
+<h2>Featured Luxury Projects</h2><br>
+<div class="projects">
+<div class="project"><span class="badge">Verified</span><img src="villas.jpg"><div class="project-info">Luxury Villas – DHA Phase 6</div></div>
+<div class="project"><span class="badge">Verified</span><img src="plaza.png"><div class="project-info">Commercial Plaza – Gulberg</div></div>
+<div class="project"><span class="badge">Verified</span><img src="appartment.png"><div class="project-info">Apartments – Bahria Town</div></div>
+</div>
+</section>
+
+<section class="container">
+<h2>Pakistan Real Estate Market Insights</h2><br>
+<p style="max-width:900px;">
+Zahid Estate delivers market-backed insights into high-growth zones, price trends, and secure long-term
+investment opportunities across DHA, Bahria Town, and prime developments nationwide.
+</p><br><br>
+<div class="services">
+<div class="card"><i class="fa-solid fa-arrow-trend-up"></i><h3>Price Trend Analysis</h3><p>Data-driven evaluation for capital appreciation.</p></div>
+<div class="card"><i class="fa-solid fa-location-dot"></i><h3>Emerging Zones</h3><p>Early identification of future-ready areas.</p></div>
+<div class="card"><i class="fa-solid fa-shield-halved"></i><h3>Risk Assessment</h3><p>Only legally verified investment options.</p></div>
+</div>
+</section>
+
+<section class="container">
+<h2>Our Buying & Investment Process</h2><br>
+<div class="services">
+<div class="card"><i class="fa-solid fa-user-check"></i><h3>Client Profiling</h3><p>Understanding goals, budget & timeline.</p></div>
+<div class="card"><i class="fa-solid fa-list-check"></i><h3>Asset Shortlisting</h3><p>Only secure, high-potential properties.</p></div>
+<div class="card"><i class="fa-solid fa-video"></i><h3>Due Diligence</h3><p>Virtual & on-site inspections.</p></div>
+<div class="card"><i class="fa-solid fa-handshake"></i><h3>Secure Closure</h3><p>Transparent execution & after-sales support.</p></div>
+</div>
+</section>
+
+<section class="container">
+<h2>Who We Work With</h2><br>
+<div class="services">
+<div class="card"><i class="fa-solid fa-gem"></i><h3>High-Net-Worth Clients</h3><p>Exclusive advisory services.</p></div>
+<div class="card"><i class="fa-solid fa-plane-departure"></i><h3>Overseas Pakistanis</h3><p>Remote & secure investments.</p></div>
+<div class="card"><i class="fa-solid fas fa-users"></i><h3>Corporate Investors</h3><p>Commercial asset advisory.</p></div>
+</div>
+</section>
+
+<section class="container why">
+  <div>
+    <h2>Why Zahid Estate?</h2><br>
+    <ul>
+      <li><strong>Decade-Long Trusted Presence:</strong> Over 10 years of experience in Pakistan's luxury real estate market, serving hundreds of satisfied clients across DHA, Bahria Town, and other prime developments.</li>
+      <li><strong>Private & Transparent Consultations:</strong> Personalized one-on-one advisory sessions, ensuring complete confidentiality and clarity at every step of your investment or property purchase.</li>
+      <li><strong>Elite Investment Approach:</strong> Data-driven strategies, market trend analysis, and high ROI opportunities tailored for high-net-worth clients, corporate investors, and overseas Pakistanis.</li>
+      <li><strong>Verified & Secure Properties:</strong> Every listing undergoes rigorous legal verification and due diligence to protect your investment and peace of mind.</li>
+      <li><strong>End-to-End Support:</strong> From property shortlisting to closure and after-sales assistance, we ensure a seamless, hassle-free experience for our clients.</li>
+      <li><strong>Market Insights & Updates:</strong> Continuous updates on emerging zones, price trends, and premium investment opportunities to help you make informed decisions.</li>
+    </ul>
+  </div>
+  <img src="ceo.jpg" alt="CEO">
+</section>
+
+<section class="container">
+  <h2>Client Experiences</h2><br>
+
+  <div class="services">
+    <div class="card">
+      <i class="fa-solid fa-globe"></i>
+      <h3>Overseas Client (UK)</h3>
+      <p>
+        Transparent, professional, and trustworthy guidance throughout the entire
+        investment process, handled remotely with complete confidence.
+      </p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-chart-pie"></i>
+      <h3>Investor – DHA</h3>
+      <p>
+        Excellent market insight and a smooth, well-structured buying experience
+        backed by verified listings and honest advice.
+      </p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-solid fa-building"></i>
+      <h3>Commercial Buyer</h3>
+      <p>
+        Helped identify secure assets and avoid high-risk investments through
+        thorough verification and documentation support.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Our YouTube Channel</h2>
+  <p style="max-width:900px; margin:10px 0 40px 0; text-align:left;">
+    Property tours, verified projects & expert market insights.
+  </p>
+
+  <div class="youtube-grid">
+    <!-- Card with Logo + Info + CTA -->
+    <div class="yt-card">
+      <img src="yt-logo.png" alt="Zahid Estate YouTube" class="yt-logo">
+      <h3>Zahid Estate</h3>
+      <p>Explore property tours, verified projects, and expert guidance for secure investments.</p>
+      <a href="https://www.youtube.com/@zahidestatepk" target="_blank" class="cta">Visit YouTube Channel</a>
+    </div>
+
+    <!-- Video iframe -->
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/26l0AHDajfQ" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+
+<section class="container" id="contact">
+  <h2>Request a Private Consultation</h2><br>
+  <div class="contact">
+    <form onsubmit="sendWhatsApp(); return false;">
+  <div class="input-icon">
+    <i class="fa-solid fa-user"></i>
+    <input id="name" name="name" placeholder="Your Name" autocomplete="name" required>
+  </div>
+  
+<div class="input-icon">
+  <i class="fab fa-whatsapp"></i>
+  <input id="phone" name="phone" placeholder="Your WhatsApp Number" autocomplete="tel" required>
+</div>
+
+  
+  <textarea id="message" name="message" placeholder="Tell us what you're looking for" autocomplete="off" required></textarea>
+  
+  <button type="submit" class="cta">Chat on WhatsApp</button>
+</form>
+
+  </div>
+</section>
+
+<footer>
+  <h2>Invest With Confidence</h2>
+  <p class="tagline">Trusted Luxury Real Estate & Investment Advisory in Pakistan</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/ZahidEstatePk/"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com/zahidestatepk/"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@zahidestatepk"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://wa.me/923001234567"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+  <p class="copy">© Zahid Estate • All Rights Reserved</p>
+</footer>
+
+
+<a href="https://wa.me/923001234567" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+const webhookURL = "https://script.google.com/macros/s/XXXXXXXXXXXX/exec"; // your deployed URL
+
+// Country codes with display name and max digits (including country code)
+const countryCodes = {
+  "+92": { name: "Pakistan", maxDigits: 12 },        // +92 + 10 digits
+  "+966": { name: "Saudi Arabia", maxDigits: 13 },
+  "+971": { name: "UAE", maxDigits: 13 },
+  "+44": { name: "UK", maxDigits: 13 },
+  "+1": { name: "USA/Canada", maxDigits: 12 },
+  "+61": { name: "Australia", maxDigits: 12 },
+  "+49": { name: "Germany", maxDigits: 13 },
+  "+33": { name: "France", maxDigits: 12 },
+  "+39": { name: "Italy", maxDigits: 12 },
+  "+64": { name: "New Zealand", maxDigits: 12 }
+};
+
+// Valid Pakistan mobile prefixes
+const pakistanPrefixes = [
+  "300","301","302","303","304","305","306","307","308","309",
+  "310","311","312","313","314","315","316","317","318","319",
+  "320","321","322","323","324","325","326","327","328","329",
+  "330","331","332","333","334","335","336","337","338","339",
+  "340","341","342","343","344","345","346","347","348","349"
+];
+
+// Feedback div under phone input
+const phoneInput = document.getElementById("phone");
+const feedback = document.createElement("div");
+feedback.style.fontSize = "0.9rem";
+feedback.style.color = "var(--gold)";
+feedback.style.marginTop = "5px";
+feedback.style.height = "18px"; // layout stable
+phoneInput.parentNode.appendChild(feedback);
+
+// Show feedback
+function showFeedback(msg, duration=200) {
+  feedback.textContent = msg;
+  setTimeout(() => { feedback.textContent = ""; }, duration);
+}
+
+// Detect country object from phone
+function detectCountry(phone) {
+  for (let code in countryCodes) {
+    if (phone.startsWith(code)) return { code, ...countryCodes[code] };
+  }
+  return null;
+}
+
+// Validate phone
+function isValidPhone(phone) {
+  if (!phone.startsWith("+")) return false;
+
+  const country = detectCountry(phone);
+  if (!country) return false;
+
+  const digitsOnly = phone.replace(/\D/g,"");
+
+  // Pakistan-specific check
+  if (country.name === "Pakistan") {
+    const prefix = phone.substring(3,6);
+    const remaining = phone.substring(6);
+    return pakistanPrefixes.includes(prefix) && /^\d{7}$/.test(remaining);
+  }
+
+  // Overseas: generic check
+  return digitsOnly.length >= 8 && digitsOnly.length <= country.maxDigits;
+}
+
+// Limit digits while typing and show country
+phoneInput.addEventListener("input", (e) => {
+  let val = e.target.value.trim();
+  const country = detectCountry(val);
+
+  if (country) {
+    showFeedback(`${country.name}`, 200);
+
+    // Enforce max digits
+    if (val.length > country.maxDigits) {
+      e.target.value = val.slice(0, country.maxDigits);
+    }
+  } else if (val.length > 0) {
+    showFeedback(`Unknown country code`, 200);
+
+    // Optional max for unknown: 15 digits
+    if (val.length > 15) e.target.value = val.slice(0, 15);
+  }
+});
+
+// Main form submission
+function sendWhatsApp() {
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !phone || !message) {
+    alert("Please fill all fields.");
+    return;
+  }
+
+  if (!isValidPhone(phone)) {
+    alert("Please enter a valid WhatsApp number with correct country code.");
+    phoneInput.focus();
+    return;
+  }
+
+  const leadID = "LEAD-" + Date.now();
+
+  // Send to Google Sheet
+  fetch(webhookURL, {
+    method: "POST",
+    body: JSON.stringify({ name, phone, message, leadID }),
+    headers: { "Content-Type": "application/json" }
+  })
+  .then(res => res.json())
+  .then(data => console.log("Lead saved:", data))
+  .catch(err => console.error("Lead not saved:", err));
+
+  // Prepare WhatsApp URL
+  const text = encodeURIComponent(`Hello, my name is ${name}.\nPhone: ${phone}\nRequirement:\n${message}\n[LeadID: ${leadID}]`);
+  const businessNumber = "923001234567"; // replace with your number
+  const appUrl = `whatsapp://send?phone=${businessNumber}&text=${text}`;
+  const webUrl = `https://web.whatsapp.com/send?phone=${businessNumber}&text=${text}`;
+
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (isMobile) {
+    window.location.href = appUrl;
+  } else {
+    let opened = false;
+    const timeout = setTimeout(() => { if (!opened) window.open(webUrl, "_blank"); }, 500);
+    const iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = appUrl;
+    document.body.appendChild(iframe);
+    window.addEventListener("blur", () => { opened = true; clearTimeout(timeout); });
+  }
+}
+</script>
+
+</body>
+</html>
